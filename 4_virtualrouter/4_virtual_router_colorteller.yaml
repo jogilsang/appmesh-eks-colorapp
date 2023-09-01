@@ -1,0 +1,10 @@
+apiVersion: appmesh.k8s.aws/v1beta2
+kind: VirtualRouter
+metadata:
+  name: colorteller-vr
+  namespace : color
+spec:
+  listeners:
+    - portMapping:
+        port: 9080
+        protocol: http

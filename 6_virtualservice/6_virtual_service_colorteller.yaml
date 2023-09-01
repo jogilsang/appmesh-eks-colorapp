@@ -1,0 +1,11 @@
+apiVersion: appmesh.k8s.aws/v1beta2
+kind: VirtualService
+metadata:
+  name: colorteller-vs
+  namespace: color
+spec:
+  awsName: colorteller.color.svc.cluster.local
+  provider:
+    virtualRouter:
+      virtualRouterRef:
+        name: colorteller-vr
